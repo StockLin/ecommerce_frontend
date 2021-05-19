@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom'
 function Product({ product }) {
     return (
         <Card className="my-3 p-3 rounted">
-            <Link to={ `/product/${product._id}` }>
+            <Link to={ `/product/${product.id}` }>
                 <Card.Img src={product.image} />
             </Link>
 
             <Card.Body>
 
-                <Link to={ `/product/${product._id}` }>
+                <Link to={ `/product/${product.id}` }>
                     <Card.Title as="div">
                         <strong>{product.name}</strong>
                     </Card.Title>
