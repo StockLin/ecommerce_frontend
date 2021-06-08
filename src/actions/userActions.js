@@ -21,6 +21,8 @@ import {
 
 } from '../constants/userConstants'
 
+import { USER_ORDERS_RESET } from '../constants/orderConstants'
+
 
 export const login = (email, password) => async (dispatch) => {
     try{
@@ -58,6 +60,7 @@ export const logout = () => (dispatch) => {
     localStorage.removeItem('userInfo')
     dispatch({type:USER_LOGOUT})
     dispatch({type:USER_DETAILS_RESET})
+    dispatch({type:USER_ORDERS_RESET})
 }
 
 export const register = (username, email, password) => async (dispatch) => {

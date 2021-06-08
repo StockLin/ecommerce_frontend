@@ -20,7 +20,7 @@ function Header() {
             <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
-                        <Navbar.Brand>Brand-Shop</Navbar.Brand>
+                        <Navbar.Brand>AlgoShop</Navbar.Brand>
                     </LinkContainer>
                     
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
