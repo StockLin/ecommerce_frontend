@@ -35,9 +35,9 @@ function ProfileScreen({ location, history }) {
         if(!userInfo){
             history.push('/login')
         }else{
-            if (!user || !user.name || success){
+            if (!user || !user.name || success || userInfo.id !== Number(user.id)){
                 dispatch({type:USER_UPDATE_PROFILE_RESET})
-                dispatch(getUserDetails('/account/profile'))
+                dispatch(getUserDetails(userInfo.id))
                 dispatch(getUserOrders())
             }else{
                 setName(user.name)
