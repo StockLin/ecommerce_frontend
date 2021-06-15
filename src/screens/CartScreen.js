@@ -94,15 +94,15 @@ function CartScreen({ match, location, history }) {
                     </ListGroup>
 
                     <ListGroup.Item>
-                    <div class="d-grid gap-2">
-                        <Button 
-                            type='button'
-                            disabled={cartItems.length === 0}
-                            onClick={checkoutHandler}
-                        >
-                            Processed to Checkout
-                        </Button>
-                    </div>
+                        <div class="d-grid gap-2">
+                            <Button 
+                                type='button'
+                                disabled={cartItems.length === 0}
+                                onClick={checkoutHandler}
+                            >
+                                Processed to Checkout
+                            </Button>
+                        </div>
                     </ListGroup.Item>
                 </Card>
             </Col>
