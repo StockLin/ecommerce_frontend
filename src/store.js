@@ -1,7 +1,13 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { productListReducer, productDetailsReducer } from './reducers/productReducers'
+import { 
+    productListReducer, 
+    productDetailsReducer, 
+    productDeleteReducer, 
+    productCreateReducer ,
+    productUpdateReducer,
+} from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
 import { 
     UserLoginReducer, 
@@ -12,13 +18,25 @@ import {
     UserDeleteReducer,
     UserUpdateReducer
 } from './reducers/userReducers'
-import { orderCreateReducer, orderDetailsReducer, orderPayReducer, userOrdersReducer } from './reducers/orderReducers'
+import { 
+    orderCreateReducer, 
+    orderDetailsReducer, 
+    orderPayReducer, 
+    orderDeliverReducer,
+    userOrdersReducer,
+    ordersReducer
+} from './reducers/orderReducers'
 
 
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,
+    productDelete: productDeleteReducer,
+    productCreate: productCreateReducer,
+    productUpdate: productUpdateReducer,
+
     cart: cartReducer,
+    
     userLogin: UserLoginReducer,
     userRegister: UserRegisterReducer,
     userDetails: UserDetailsReducer,
@@ -30,7 +48,9 @@ const reducer = combineReducers({
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
     orderPay: orderPayReducer,
+    orderDeliver: orderDeliverReducer,
     userOrders: userOrdersReducer,
+    orders: ordersReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?
