@@ -5,6 +5,7 @@ import { listProducts } from '../actions/productActions'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import Paginate from '../components/Paginate'
+import ProductCarousel from '../components/ProductCarousel'
 import Product from '../components/Product'
 
 
@@ -20,6 +21,8 @@ function HomeScreen({ history }) {
 
     return (
         <div>
+            { !keyword && <ProductCarousel /> }
+            
             { loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     :
