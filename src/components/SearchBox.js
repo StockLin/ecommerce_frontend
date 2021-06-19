@@ -16,7 +16,7 @@ function SearchBox() {
     }
 
     return (
-        <Form onSubmit={submitHandler} inline>
+        <Form onSubmit={submitHandler} className='d-flex'>
             <Form.Control
                 className='mr-sm-2 ml-sm-5'
                 type='text'
